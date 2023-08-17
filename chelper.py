@@ -12,7 +12,7 @@ def compile_c_files(files):
     for file in files:
         print(str(file))
         try:
-            os.system("cc " + file)
+            os.system("cc " + file + ' -Wall -Wextra -Werror')
         except:
             print("Compiling file {file} failed. Skipping.")
 
